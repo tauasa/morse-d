@@ -7,7 +7,7 @@ A D programming language command-line application that converts text ↔ Morse c
 ## Opening in VS Code
 
 ```bash
-code morse-d-vscode/
+code morse-d/
 ```
 
 VS Code will prompt: **"Do you want to install the recommended extensions?"**  
