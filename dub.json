@@ -1,0 +1,37 @@
+{
+    "name": "morse",
+    "description": "Morse Code Converter CLI – encode, decode, and play audio tones",
+    "authors": ["Tauasa Timoteo"],
+    "license": "MIT",
+    "copyright": "Copyright © 2024, Tauasa Timoteo",
+    "homepage": "https://github.com/tauasa/morse",
+    "version": "2.0.0",
+
+    "targetType": "executable",
+    "targetName": "morse",
+    "sourcePaths": ["source"],
+    "mainSourceFile": "source/app.d",
+
+    "buildTypes": {
+        "debug": {
+            "buildOptions": ["debugMode", "debugInfo"]
+        },
+        "release": {
+            "buildOptions": ["releaseMode", "optimize", "inline"],
+            "dflags": ["-strip=all"]
+        }
+    },
+
+    "configurations": [
+        {
+            "name": "application",
+            "targetType": "executable"
+        },
+        {
+            "name": "test",
+            "targetType": "executable",
+            "mainSourceFile": "source/test_runner.d",
+            "excludedSourceFiles": ["source/app.d"]
+        }
+    ]
+}

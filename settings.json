@@ -1,0 +1,59 @@
+{
+    // ── D language server (code-d / serve-d) ────────────────────────────────
+    // code-d auto-detects dub.json; these settings fine-tune its behaviour.
+
+    // Prefer LDC for faster incremental builds; fall back to DMD
+    "d.dubCompiler": "ldc2",
+
+    // Show inlay hints for variable types inferred with `auto`
+    "d.inlayHints.enable": true,
+    "d.inlayHints.parameterNames": true,
+
+    // Format with dfmt on save
+    "d.enableFormatting": true,
+    "[d]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "webfreak.code-d"
+    },
+
+    // dfmt style preferences (mirrors dmd community defaults)
+    "dfmt.braceStyle": "allman",
+    "dfmt.spaceAfterCast": true,
+    "dfmt.splitOperatorAtLineEnd": false,
+    "dfmt.tabWidth": 4,
+    "dfmt.useTabs": false,
+
+    // ── Editor ────────────────────────────────────────────────────────────────
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [100],
+    "editor.renderWhitespace": "boundary",
+    "editor.bracketPairColorization.enabled": true,
+
+    // ── File handling ─────────────────────────────────────────────────────────
+    "files.associations": {
+        "*.d":   "d",
+        "*.di":  "d",
+        "*.sdl": "sdl"
+    },
+    "files.exclude": {
+        "**/.dub":       true,
+        "**/morse":      false,
+        "**/morse.exe":  false
+    },
+    "files.watcherExclude": {
+        "**/.dub/**":    true,
+        "**/build/**":   true
+    },
+
+    // ── Terminal ──────────────────────────────────────────────────────────────
+    "terminal.integrated.env.linux":   { "PATH": "${env:PATH}:${env:HOME}/.dub/bin" },
+    "terminal.integrated.env.osx":     { "PATH": "${env:PATH}:${env:HOME}/.dub/bin" },
+    "terminal.integrated.env.windows": { "PATH": "${env:PATH};${env:USERPROFILE}\\.dub\\bin" },
+
+    // ── Search ────────────────────────────────────────────────────────────────
+    "search.exclude": {
+        "**/.dub":   true,
+        "**/build":  true
+    }
+}
