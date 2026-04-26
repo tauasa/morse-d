@@ -1,9 +1,6 @@
-# Morse — D CLI  v2.0.0
+# Morse Code Converter/Player in D
 
-A D programming language command-line application that converts text ↔ Morse code
-with optional 700 Hz audio playback.
-
-**Repository:** https://github.com/tauasa/morse
+A D programming language command-line application that converts text ↔ Morse code with optional 700 Hz audio playback.
 
 ---
 
@@ -120,7 +117,7 @@ Options:
 │ Hello World                                                │
 ├────────────────────────────────────────────────────────────┤
 │ Output (Morse):                                            │
-│ .... . .-.. .-.. --- / .-- --- .-. .-.. -..               │
+│ .... . .-.. .-.. --- / .-- --- .-. .-.. -..                │
 └────────────────────────────────────────────────────────────┘
 ```
 
