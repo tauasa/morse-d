@@ -27,6 +27,7 @@ import std.process : pipeProcess, Redirect, wait, ProcessException,
                      executeShell;
 import std.stdio   : stderr;
 import std.array   : join;
+import std.array;
 
 // ── Timing constants ──────────────────────────────────────────────────────────
 
